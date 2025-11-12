@@ -1,0 +1,267 @@
+    Directory: C:\Users\plame\Workspace
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         11/4/2025   4:21 PM          54024 a.exe
+-a----         11/4/2025   4:18 PM             77 main.c
+-a----         11/4/2025   4:29 PM          54024 main.exe
+
+
+PS C:\Users\plame\Workspace> gcc -E -P simple.c -o simple.i
+PS C:\Users\plame\Workspace> gcc -E simple.c -o simple.i   
+PS C:\Users\plame\Workspace> gcc -E -P simple.c -o simple.i
+PS C:\Users\plame\Workspace> gcc -E simple.c -o simple.i   
+PS C:\Users\plame\Workspace> gcc -S simple.c -o simple.s
+PS C:\Users\plame\Workspace> gcc -c simple.c -o simple.o
+PS C:\Users\plame\Workspace> gcc simple.c -o simple.exe
+PS C:\Users\plame\Workspace> .\simple.exe
+C:\Users\plame\AppData\Local\Temp\ccic97Wm.o:program.c:(.text+0x24): undefined reference to `square'
+collect2.exe: error: ld returned 1 exit status
+PS C:\Users\plame\Workspace> gcc program.c maths.c -o program.exe
+PS C:\Users\plame\Workspace> .\program.exe
+30.250000
+PS C:\Users\plame\Workspace> gcc -c maths.c -o maths.o
+PS C:\Users\plame\Workspace> gcc program.c maths.o -o program1.exe
+PS C:\Users\plame\Workspace> .\program1.exe
+30.250000
+PS C:\Users\plame\Workspace> ar rcs libmaths.a maths.o
+PS C:\Users\plame\Workspace> gcc program.c -L.\ -lmaths -o program2.exe
+PS C:\Users\plame\Workspace> .\program2.exe
+30.250000
+PS C:\Users\plame\Workspace> gcc usepow.c -o usepow.exe
+PS C:\Users\plame\Workspace> gcc usepow.c -lm -o usepow.exe
+PS C:\Users\plame\Workspace> 
+ *  History restored 
+
+PS C:\Users\plame\Workspace> 
+ *  History restored 
+
+PS C:\Users\plame\Workspace>
+PS C:\Users\plame\Workspace>
+PS C:\Users\plame\Workspace> notepad comandi.txt
+PS C:\Users\plame\Workspace> gcc -E file.c > preprocessed.c
+gcc.exe: error: file.c: No such file or directory
+gcc.exe: fatal error: no input files
+compilation terminated.
+PS C:\Users\plame\Workspace> дир
+дир : The term 'дир' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was 
+included, verify that the path is correct and try again.
+At line:1 char:1
++ дир
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (дир:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\plame\Workspace> dir
+
+
+    Directory: C:\Users\plame\Workspace
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         11/5/2025   9:39 AM                kompilators
+d-----         11/5/2025   9:40 AM                libraliry
+d-----         11/5/2025  10:07 AM                macros
+
+
+
+
+PS C:\Users\plame\Workspace> cd macros
+PS C:\Users\plame\Workspace\macros> cd POW
+PS C:\Users\plame\Workspace\macros\POW> gcc -E file.c > preprocessed.c
+gcc.exe: error: file.c: No such file or directory
+gcc.exe: fatal error: no input files
+compilation terminated.
+PS C:\Users\plame\Workspace\macros\POW> gcc -E defined_double_argument.c > preprocessed.c
+PS C:\Users\plame\Workspace\macros\POW> gcc -E defined_double_argument.c > preprocessed.c
+PS C:\Users\plame\Workspace\macros\POW> cd ..
+PS C:\Users\plame\Workspace\macros> cd ..
+PS C:\Users\plame\Workspace> cd macros
+PS C:\Users\plame\Workspace\macros> cd nai malko obshto kratno
+Set-Location : A positional parameter cannot be found that accepts argument 'malko'.
+At line:1 char:1
++ cd nai malko obshto kratno
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\plame\Workspace\macros> cd nmok
+PS C:\Users\plame\Workspace\macros\nmok> gcc -E nmok.c > preprocessed_nmok.c              
+PS C:\Users\plame\Workspace\macros\nmok> gcc SE nmok.c > asembler_nmok.s    
+gcc.exe: error: SE: No such file or directory
+PS C:\Users\plame\Workspace\macros\nmok> gcc -S nmok.c > asembler_nmok.s
+PS C:\Users\plame\Workspace\macros\nmok> gcc -S program.c -o pr       
+gcc.exe: error: program.c: No such file or directory
+gcc.exe: fatal error: no input files
+compilation terminated.
+PS C:\Users\plame\Workspace\macros\nmok> 
+ *  History restored 
+
+
+PS C:\Users\plame\Workspace> cd macros
+PS C:\Users\plame\Workspace\macros> cd maths
+PS C:\Users\plame\Workspace\macros\maths> gcc -c maths.c -o maths.o
+PS C:\Users\plame\Workspace\macros\maths> ar rcs libmaths.a maths.o
+PS C:\Users\plame\Workspace\macros\maths> gcc main.c -L. -lmaths -o main.exe
+PS C:\Users\plame\Workspace\macros\maths> .\main.exe
+120
+PS C:\Users\plame\Workspace\macros\maths> 
+
+PS C:\Users\plame\Workspace\make_and_main_arguments> 
+ *  History restored 
+
+PS C:\Users\plame\Workspace> cd make_and_main_arguments
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+make: *** No targets specified and no makefile found.  Stop.
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc main.c -o main.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\main.exe
+Hello world!
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc main.c -o main.exe
+.\main.exe
+Hello world!
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+make: `main.exe' is up to date.
+PS C:\Users\plame\Workspace\make_and_main_arguments> make clean
+del main.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc main.c -o main.exe
+.\main.exe
+Hello world!
+PS C:\Users\plame\Workspace\make_and_main_arguments> make main.exe
+make: `main.exe' is up to date.
+PS C:\Users\plame\Workspace\make_and_main_arguments> make clean
+del main.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc main.c -o main.exe
+C:\Users\plame\AppData\Local\Temp\ccaBl15m.o:main.c:(.text+0x1a): undefined reference to `square'
+collect2.exe: error: ld returned 1 exit status
+make: *** [main.exe] Error 1
+PS C:\Users\plame\Workspace\make_and_main_arguments> gcc -c maths.c -o maths.o
+PS C:\Users\plame\Workspace\make_and_main_arguments> gcc main.c maths.o -o main.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\main.exe
+18.490000
+PS C:\Users\plame\Workspace\make_and_main_arguments> make clean
+del main.exe maths.o
+PS C:\Users\plame\Workspace\make_and_main_arguments> make maths.o
+gcc -c maths.c -o maths.o
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc main.c maths.o -o main.exe
+.\main.exe
+18.490000
+PS C:\Users\plame\Workspace\make_and_main_arguments> make clean
+del main.exe maths.o
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc -c maths.c -o maths.o
+gcc main.c maths.o -o main.exe
+.\main.exe
+18.490000
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+make: `main.exe' is up to date.
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+make: `main.exe' is up to date.
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+del main.exe maths.o
+gcc -c maths.c -o maths.o
+gcc main.c maths.o -o main.exe
+.\main.exe
+square: 18.490000
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+make: `main.exe' is up to date.
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc main.c maths.o -o main.exe
+.\main.exe
+!square: 18.490000
+PS C:\Users\plame\Workspace\make_and_main_arguments> make clean
+del main.exe maths.o strings.o program.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc -c maths.c -o maths.o
+gcc -c strings.c -o strings.o
+gcc main.c maths.o strings.o -o main.exe
+.\main.exe
+!square: 18.490000 
+len: 6 
+PS C:\Users\plame\Workspace\make_and_main_arguments> make program.exe
+gcc program.c strings.o -o program.exe
+.\program.exe
+len: 6
+PS C:\Users\plame\Workspace\make_and_main_arguments> make clean
+del main.exe maths.o strings.o program.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc -c maths.c -o maths.o
+gcc -c strings.c -o strings.o
+gcc main.c maths.o strings.o -o main.exe
+.\main.exe
+!square: 18.490000 
+len: 6 
+gcc program.c strings.o -o program.exe
+.\program.exe
+len: 6
+PS C:\Users\plame\Workspace\make_and_main_arguments> make clean
+del *.o *.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+gcc -c maths.c -o maths.o
+gcc -c strings.c -o strings.o
+gcc main.c maths.o strings.o -o main.exe
+.\main.exe
+!square: 18.490000 
+len: 6 
+gcc program.c strings.o -o program.exe
+.\program.exe
+len: 6
+PS C:\Users\plame\Workspace\make_and_main_arguments> gcc main_arguments.c -o main_arguments.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\main_arguments.exe Teodor Plamen 5
+C:\Users\plame\Workspace\make_and_main_arguments\main_arguments.exe
+Teodor
+Plamen
+5
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\main_arguments.exe Aleks TUES 8   
+C:\Users\plame\Workspace\make_and_main_arguments\main_arguments.exe
+Aleks
+TUES
+8
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\main_arguments.exe TUES        
+C:\Users\plame\Workspace\make_and_main_arguments\main_arguments.exe
+TUES
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\main_arguments.exe TUES 5
+C:\Users\plame\Workspace\make_and_main_arguments\main_arguments.exe
+TUES
+5
+PS C:\Users\plame\Workspace\make_and_main_arguments> gcc repeat.c -o repeat.exe
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\repeat.exe 5 Plamen
+Plamen
+Plamen
+Plamen
+Plamen
+Plamen
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\repeat.exe 7 Teodor
+Teodor
+Teodor
+Teodor
+Teodor
+Teodor
+Teodor
+Teodor
+PS C:\Users\plame\Workspace\make_and_main_arguments> 
+PS C:\Users\plame\Workspace> 
+ *  History restored 
+
+PS C:\Users\plame\Workspace> gcc main.c -o prep.o
+gcc.exe: error: main.c: No such file or directory
+gcc.exe: fatal error: no input files
+compilation terminated.
+PS C:\Users\plame\Workspace> cd make_and_main_arguments
+PS C:\Users\plame\Workspace\make_and_main_arguments> gcc  main.c -o prep.exe   
+PS C:\Users\plame\Workspace\make_and_main_arguments> .\prep.exe
+Hello world!
+PS C:\Users\plame\Workspace\make_and_main_arguments> make
+make : The term 'make' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was 
+included, verify that the path is correct and try again.
+At line:1 char:1
++ make
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (make:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException

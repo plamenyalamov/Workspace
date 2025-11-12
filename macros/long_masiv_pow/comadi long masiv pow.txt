@@ -1,0 +1,7 @@
+gcc main.c -L. -lm -o pow1
+ 
+ ar rcs libm.a math.o
+
+ gcc -c math.c -o math.o
+
+ ar rcs libm.a math.o

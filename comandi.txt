@@ -1,0 +1,13 @@
+ ПРЕПРОЦЕСИНГ gcc -E main.c -o main.i
+
+АСЕМБЛЕР gcc -S program.c -o program.s
+
+
+
+СТАТИЧНА БИБЛИОТЕКА ar rcs libmaths.a maths.o
+ИЗЖИКЖАНЕ И КОМПИЛИРАНЕ НА  ΜΑΙΝ gcc main.c -L. -lmaths -o main.exe
+PS C:\Users\plame\Workspace\macros\maths> .\main.exe
+
+ -L. → указва на компилатора да търси библиотеката в текущата директория.
+-lmaths → означава “линкни libmaths.a”.
+ 

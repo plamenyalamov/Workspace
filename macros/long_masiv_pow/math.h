@@ -1,0 +1,1 @@
+long pow(int x,int y);

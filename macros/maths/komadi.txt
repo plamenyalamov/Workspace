@@ -1,0 +1,4 @@
+ar rcs libmaths.a maths.o
+ar rcs libmaths.a maths.o
+gcc main.c -L. -lmaths -o main.exe
+.\main.exe
