@@ -31,10 +31,10 @@ int strcompare(char s1[], char s2[]) {
 }
 
 void print_help_menu() {
-    printf("=== Помощно меню ===\n");
-    printf("1. strlength - Намира дължината на символен низ.\n");
-    printf("2. strconcat - Обединява два символни низа.\n");
-    printf("3. strcompare - Сравнява два символни низа.\n\n");
+    printf("=== Pomoshchno meniu ===\n");
+    printf("1. strlength - Namira dulzhinata na simvolen niz.\n");
+    printf("2. strconcat - Obedinyava dva simvolni niza.\n");
+    printf("3. strcompare - Sravnyava dva simvolni niza.\n\n");
 }
 
 int main() {
@@ -43,43 +43,43 @@ int main() {
     char str1[100], str2[100];
     int choice;
 
-    printf("Избери функция (1-3): ");
+    printf("Izberi funkciya (1-3): ");
     scanf("%d", &choice);
     getchar(); 
 
     if (choice == 1) {
-        printf("Въведи низ: ");
+        printf("Vavedhi niz: ");
         fgets(str1, sizeof(str1), stdin);
         str1[strcspn(str1, "\n")] = '\0';
-        printf("Дължината е: %d\n", strlength(str1));
+        printf("Dulzhinata e: %d\n", strlength(str1));
     }
     else if (choice == 2) {
-        printf("Въведи първи низ: ");
+        printf("Vavedhi parvi niz: ");
         fgets(str1, sizeof(str1), stdin);
         str1[strcspn(str1, "\n")] = '\0';
-        printf("Въведи втори низ: ");
+        printf("Vavedhi vtori niz: ");
         fgets(str2, sizeof(str2), stdin);
         str2[strcspn(str2, "\n")] = '\0';
         strconcat(str1, str2);
-        printf("Обединен низ: %s\n", str1);
+        printf("Obedinen niz: %s\n", str1);
     }
     else if (choice == 3) {
-        printf("Въведи първи низ: ");
+        printf("Vavedhi parvi niz: ");
         fgets(str1, sizeof(str1), stdin);
         str1[strcspn(str1, "\n")] = '\0';
-        printf("Въведи втори низ: ");
+        printf("Vavedhi vtori niz: ");
         fgets(str2, sizeof(str2), stdin);
         str2[strcspn(str2, "\n")] = '\0';
         int cmp = strcompare(str1, str2);
         if (cmp == 0)
-            printf("Низовете са еднакви.\n");
+            printf("Nizovete sa ednakvi.\n");
         else if (cmp < 0)
-            printf("Първият низ е по-малък.\n");
+            printf("Parviat niz e po-malak.\n");
         else
-            printf("Първият низ е по-голям.\n");
+            printf("Parviat niz e po-golqm.\n");
     }
     else {
-        printf("Невалиден избор!\n");
+        printf("Nevaliden izbor!\n");
     }
 
     return 0;
