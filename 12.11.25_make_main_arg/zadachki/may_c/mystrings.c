@@ -1,34 +1,46 @@
 #include "mystrings.h"
 
-// Функция за дължина на низ
-int strlength(const char str[]) {
+int strlength(const char *s) {
     int len = 0;
-    while (str[len] != '\0') {
+
+    while (s[len] != '\0') {
         len++;
     }
+
     return len;
 }
 
-// Конкатениране на низове
-void strconcat(char str1[], const char str2[]) {
-    int i = 0, j = 0;
-    while (str1[i] != '\0') i++;      // стига до края на str1
-    while (str2[j] != '\0') {
-        str1[i] = str2[j];
+void strconcat(char *s1, const char *s2) {
+    int i = 0;
+    int j = 0;
+
+    while (s1[i] != '\0') {
+        i++;
+    }
+
+    while (s2[j] != '\0') {
+        s1[i] = s2[j];
         i++;
         j++;
     }
-    str1[i] = '\0';                   // край на обединения низ
+
+    s1[i] = '\0';
 }
 
-// Лексикално сравнение
-int strcompare(const char str1[], const char str2[]) {
+int strcompare(const char *s1, const char *s2) {
     int i = 0;
-    while (str1[i] != '\0' && str2[i] != '\0') {
-        if (str1[i] != str2[i])
-            return (str1[i] < str2[i]) ? -1 : 1;
+
+    while (s1[i] != '\0' && s2[i] != '\0') {
+        if (s1[i] < s2[i]) {
+            return -1;
+        }
+        if (s1[i] > s2[i]) {
+            return 1;
+        }
         i++;
     }
-    if (str1[i] == str2[i]) return 0;  // и двата низа приключват едновременно
-    return (str1[i] == '\0') ? -1 : 1;
+
+    if (s1[i] == '\0' && s2[i] == '\0') return 0;
+    if (s1[i] == '\0') return -1;
+    return 1;
 }
